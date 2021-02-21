@@ -423,7 +423,7 @@ ssl_install() {
     judge "Install the SSL certificate generation script"
 }
 domain_check() {
-    read -rp "Please enter your domain information (eg:www.wulabing.com):" domain
+    read -rp "Please enter your domain information (eg:www.markherreropogi.com):" domain
     domain_ip=$(ping "${domain}" -c 1 | sed '1{s/[^(]*(//;s/).*//;q}')
     echo -e "${OK} ${GreenBG} Obtaining public network ip information, please be patient ${Font}"
     local_ip=$(curl https://api-ipv4.ip.sb/ip)
